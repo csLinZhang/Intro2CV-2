@@ -15,7 +15,7 @@ leftImg = imread([path 'test-left\4.jpg']);
 rightImg = imread([path 'test-right\4.jpg']);
 
 %基于双目系统参数，完成左右目图像的校正
-%reprojectionMatrix，对应于教材中式17-28中的矩阵Q，用于为已知视差的像素点计算其三维空间坐标
+%reprojectionMatrix，对应于教材中式18-38中的矩阵Q，用于为已知视差的像素点计算其三维空间坐标
 [frameLeftRect, frameRightRect, reprojectionMatrix] = rectifyStereoImages(leftImg, rightImg, stereoParams);
 
 frameLeftGray  = im2gray(frameLeftRect);
